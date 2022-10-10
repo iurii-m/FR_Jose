@@ -1,0 +1,11 @@
+h5py==2.10.0
+joblib 
+numpy==1.19.5
+opencv-python==4.5.1.48
+scikit-image==0.17.2
+scikit-learn 
+tensorboard==2.4.1
+tensorboard-plugin-wit==1.8.0
+tensorflow-estimator==2.4.0
+tensorflow-gpu==2.4.1
+
