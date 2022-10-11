@@ -20,6 +20,9 @@ threshold   0.42    0.6694      0.7967  0.85627     0.8874  0.9161
 
 For folder processing the default image extentions:  [".jpg",".bmp",".png"]
 
+Embeddings are saved to the .npy file - standars data container for numpy library.
+Can be changed to whatever file is required
+
 
 #Example of usage:
 
@@ -31,8 +34,8 @@ For folder processing the default image extentions:  [".jpg",".bmp",".png"]
     python FR_main.py -m s_im -i {image_path} -ie {path_embedding}
   
 #Extract embeddings from a directory with images
-    python FR_main.py -m s_im
-    python FR_main.py -m s_im -d {dataset_path} -de {embedding_of_dataset}
+    python FR_main.py -m im_dir
+    python FR_main.py -m im_dir -d {dataset_path} -de {embedding_of_dataset}
 
 #match embeddings  
     python FR_main.py -m m_emb  
@@ -76,6 +79,7 @@ default_if_detect = True
 
 default_threshold = 0.75
 
+default_im_exts = [".jpg",".bmp",".png"]
 
     
 def extract_embedding(image, 
@@ -364,7 +368,7 @@ def demo_extract_single_embedding(image_path:str,
 
 def demo_extract_from_folder(path_to_input_images: str,
                              path_to_output_embeddings:str, 
-                             im_exts = [".jpg",".bmp",".png"]
+                             im_exts = default_im_exts
                              ):
     print("Extracting a embedding from a dataset")
     files = []

@@ -20,6 +20,8 @@ EER -  0.00189 at threshold ~ 0.75
 
 For folder processing the default image extentions:  [".jpg",".bmp",".png"]
 
+Embeddings are saved to the .npy file - standars data container for numpy library.
+Can be changed to whatever file is required.
 
 # Example of usage:
 
@@ -33,8 +35,8 @@ For folder processing the default image extentions:  [".jpg",".bmp",".png"]
   
 
 ##### Extract embeddings from a directory with images
-    python FR_main.py -m s_im
-    python FR_main.py -m s_im -d {dataset_path} -de {embedding_of_dataset}
+    python FR_main.py -m im_dir
+    python FR_main.py -m im_dir -d {dataset_path} -de {embedding_of_dataset}
 
 
 ##### match embeddings  
